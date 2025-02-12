@@ -103,6 +103,13 @@
               &#60;/Projects&#62;
             </a>
           </li>
+
+          <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
+            <a href="#contact" aria-label="projects menu button">
+              &#60;/Contact&#62;
+            </a>
+          </li>
+
         </ul>
       </div>
       <!-- navbar tabs ends -->
@@ -143,6 +150,12 @@
         <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
           <a href="#projects" tabindex="0" aria-label="projects menu button">
             &#60;/Projects&#62;
+          </a>
+        </li>
+
+        <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
+          <a href="#contact" tabindex="0" aria-label="projects menu button">
+            &#60;/Contact&#62;
           </a>
         </li>
       </ul>
@@ -447,6 +460,213 @@
     </section>
   </main>
   <!-- main ends here -->
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    *, *::before, *::after{
+      box-sizing: border-box;
+      margin : 0;
+      padding : 0;
+    }
+
+    :root{
+      color-scheme : light only; /*To force light  mode*/
+    }
+
+    .form-container form{
+      width : min(50%, 40vw);
+      padding : 2em 2em;
+      border-radius : 1em;
+      border : 1px solid rgba(255,255,255,0.3);
+      resize : width;
+      transition : ease 0.4s;
+      margin: 0 auto;
+    }
+
+    .form-container form:has(input:focus, #submitButton:hover){
+      background-color : rgba(255,255,255,0.06);
+      box-shadow: 10px 10px 15px rgba(0,0,0,0.2), -2px -2px 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .form-container input{
+      margin-bottom : 3em;
+      width : 100%;
+      border : none;
+      border-radius : 0.5em;
+      background-color : rgba(255, 255, 255, 0.3);
+      padding : 0.7em 1em;
+      font-size : clamp(0.5rem,calc(0.9vw + 0.3rem),1rem);
+      font-family : 'Roboto', sans-serif;
+      outline : none;
+      transition : ease 0.4s;
+      color: white;
+    }
+
+    .form-container textarea{
+      margin-bottom : 3em;
+      width : 100%;
+      border : none;
+      border-radius : 0.5em;
+      background-color : rgba(255, 255, 255, 0.3);
+      padding : 0.7em 1em;
+      font-size : clamp(0.5rem,calc(0.9vw + 0.3rem),1rem);
+      font-family : 'Roboto', sans-serif;
+      outline : none;
+      transition : ease 0.4s;
+      color: white;
+    }
+
+   .form-container input:focus, #submitButton:hover, #submitButton:active {
+      background-color : rgba(255, 255, 255, 0.9);
+      color : rgba(60, 60, 60, 1);
+    }
+
+    .form-container #submitButton{
+      width : 45%;
+      display : block;
+      margin : 0 auto;
+      border: none;
+      border-radius: 0.5em;
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 0.7em 1em;
+      font-size: clamp(0.5rem, calc(0.9vw + 0.3rem), 1rem);
+      font-family: 'Roboto', sans-serif;
+      outline: none;
+      transition: ease0.4s;
+      color: white;
+    }
+
+    .form-container label{
+      display:inline-block;
+      margin-bottom : 0.5em;
+      color: white;
+    }
+
+    .form-container a{
+      color : white;
+      text-underline-offset: 0.2em; 
+      font-size : clamp(0.2rem,calc(1vw + 0.1rem),0.9rem);
+      text-align : center;
+    }
+
+    .form-container a:focus{
+      outline : 0.15rem rgba(255,255,255, 0.4) solid;
+      outline-offset : 0.4em;
+      border-radius : 0.02em;
+    }
+    
+    .form-container{
+      padding-bottom: 10rem;
+    }
+
+    #submitButton:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(120deg, #fff0 30%, #fffc, #fff0 70%);
+    top: 0;
+    left: -100px;
+    opacity: .6;
+    animation: shine 1.5sease-out infinite;
+}
+
+#submitButton {
+  background-color: black; 
+  color: white; 
+  padding: 15px 30px; 
+  font-size: 18px;
+  font-weight: bold;
+  border: none; 
+  border-radius: 25px; 
+  position: relative;
+  overflow: hidden; 
+  cursor: pointer; 
+  transition: all 0.3s ease; 
+}
+
+/* Shine effect overlay */
+#submitButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+
+  animation: shine 2s infinite; 
+}
+
+@keyframes shine {
+  0% {
+    left: -100%; 
+  }
+  100% {
+    left: 100%; 
+  }
+}
+
+#submitButton:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); 
+}
+
+#submitButton:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 1200px) {
+  .form-container form{
+    width: 80%;
+  }
+}    
+</style>
+
+<!-- Contact Us Form -->
+<div id="contact" class="form-container">  <form target="_blank" action="https://formsubmit.co/ajaymalasharbt@gmail.com" method="POST">
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col">
+          <label>Name</label><br>
+          <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+        </div>
+        <div class="col">
+          <label>Email</label><br>
+          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Message</label><br>
+      <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+    </div>
+    <button id="submitButton" type="submit" class="btn btn-lg btn-dark btn-block">Submit</button>
+  </form>
+</div> 
+
+<script>
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault(); 
+
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId); 
+
+    if (targetElement) {
+      const targetRect = targetElement.getBoundingClientRect();
+      const targetTop = targetRect.top + window.scrollY;
+      const targetHeight = targetRect.height;
+
+      const offset = (window.innerHeight - targetHeight) / 2;
+      const scrollPosition = targetTop - offset;
+
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth' 
+      });
+    }
+  });
+});
+</script>
 
   <footer id="footer">
     <button class="fas" id="backtotopbutton" onclick="scrolltoTopfunction()">
