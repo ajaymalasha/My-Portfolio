@@ -621,7 +621,8 @@
 </style>
 
 <!-- Contact Us Form -->
-<div id="contact" class="form-container">  <form target="_blank" action="https://formsubmit.co/2b9cd1dcced7501983ba28699de27704" method="POST">
+<div id="contact" class="form-container">  
+  <form id="contactForm" target="_blank" action="https://formsubmit.co/2b9cd1dcced7501983ba28699de27704" method="POST">
     <div class="form-group">
       <div class="form-row">
         <div class="col">
@@ -666,6 +667,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+      setTimeout(function() {
+        document.getElementById('contactForm').reset();
+      }, 1000);
+    });
 </script>
 
   <footer id="footer">
